@@ -58,11 +58,11 @@ set fileencoding=utf-8
 call pathogen#infect()
 filetype plugin indent on
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""" nerdtree """"""""""""""""""""""""""""""
 " 设置 F2 快捷键打开/关闭 nerdtree
 nnoremap <F2> :NERDTreeToggle<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""" taglist """""""""""""""""""""""""""""""
 " 设置 F3 快捷键 打开/关闭 taglist
 nnoremap <F3> :TlistToggle<CR>			
 
@@ -81,11 +81,11 @@ let Tlist_WinHeight=100
 " 设置taglist宽度
 let Tlist_WinWidth=40   
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""" ctags """"""""""""""""""""""""""""""""
 " 配置 ctags 快捷键
 nnoremap <F5> :!ctags -R<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""" completeopt """""""""""""""""""""""""""
 set completeopt=menu,menuone
 
 " 全局查找控制。0:禁止；1:允许(缺省)
@@ -115,9 +115,14 @@ let OmniCpp_ShowPrototypeInAbbr = 1
 " 默认命名空间列表, 项目间使用','隔开.
 let OmniCpp_DefaultNamespace=["std"]    
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""" tagbar """""""""""""""""""""""""""""""""
+" 设置 F8 快捷键 打开/关闭 taglist
+nnoremap <F8> :TagbarToggle<CR>
+
+""""""""""""""""""""""""""" solarized """""""""""""""""""""""""""""""
 syntax enable
-set background=dark
+" dark or light
+set background=light
 
 " 16 or 256
 let g:solarized_termcolors=256
@@ -131,5 +136,18 @@ let g:solarized_visibility="normal"
 
 colorscheme solarized
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""" airline """""""""""""""""""""""""""""""
+" 不显示文档总字数
+let g:airline#extensions#wordcount#enabled = 0
 
+let g:airline#extensions#tabline#enabled=1
+
+let g:airline#extensions#tabline#formatter='default'
+
+" 激活tagbar扩展
+let g:airline#extensions#tagbar#enabled = 1
+
+""""""""""""""""""""""""""""" gitgutter """""""""""""""""""""""""""""
+let g:gitgutter_terminal_reports_focus=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
