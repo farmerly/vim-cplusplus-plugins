@@ -1,5 +1,7 @@
 ### .vimrc 配置
 
+`vimrc` 配置说明
+
 ```
 " 自动语法高亮
 syntax on
@@ -18,6 +20,9 @@ set autoindent
 
 " 设置自动缩进宽度
 set shiftwidth=4
+
+" 将tab转为空格
+set expandtab
 
 " 设置使用C/C++的缩进方式
 set cindent
@@ -83,21 +88,32 @@ nnoremap <F5> :!ctags -R<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set completeopt=menu,menuone
-"全局查找控制。0:禁止；1:允许(缺省)
+
+" 全局查找控制。0:禁止；1:允许(缺省)
 let OmniCpp_GlobalScopeSearch=1         
-"命名空间查找控制, 0,禁止; 1, 查找当前文件缓冲区内的命名空间(缺省); 2, 查找当前文件缓冲区和包含文件中的命名空间
+
+" 命名空间查找控制: 
+"     0,禁止;
+"     1, 查找当前文件缓冲区内的命名空间(缺省); 
+"     2, 查找当前文件缓冲区和包含文件中的命名空间
 let OmniCpp_NamespaceSearch=1           
-"操作符 .  号后自动提示; 0, 否; 1, 是
+
+" 操作符 .  号后自动提示; 0, 否; 1, 是
 let OmniCpp_MayCompleteDot=1            
-"操作符 -> 号后自动提示; 0, 否; 1, 是
+
+" 操作符 -> 号后自动提示; 0, 否; 1, 是
 let OmniCpp_MayCompleteArrow=1          
-"操作符 :: 号后自动提示; 0, 否; 1, 是
+
+" 操作符 :: 号后自动提示; 0, 否; 1, 是
 let OmniCpp_MayCompleteScope=1          
-"类成员显示控制(是否显示全部公有(public)私有(private)保护(protected)成员). 0:自动; 1:显示所有成员
+
+" 类成员显示控制(是否显示全部公有(public)私有(private)保护(protected)成员). 0:自动; 1:显示所有成员
 let OmniCpp_DisplayMode=0               
-"显示函数参数列表 
+
+" 显示函数参数列表 
 let OmniCpp_ShowPrototypeInAbbr = 1     
-"默认命名空间列表, 项目间使用','隔开.
+
+" 默认命名空间列表, 项目间使用','隔开.
 let OmniCpp_DefaultNamespace=["std"]    
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
