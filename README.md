@@ -1,5 +1,7 @@
 # vim c++ 插件
 
+插件安装直接执行 install.sh, 若 ~/.vim、~/.vimrc 已存在会自动删除, 因此在执行 install.sh 前需手动备份自己的 vim 配置
+
 ## airline
 
 airline 是一个状态栏插件, 可以显示一些文件名, 行号等.
